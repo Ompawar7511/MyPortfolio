@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Om Pawar - Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #10b981;
+      --secondary: #06b6d4;
+      --dark: #0f172a;
+      --light: #f8fafc;
+      --gray: #64748b;
+      --border: #e2e8f0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--light);
+      color: var(--dark);
+      line-height: 1.5;
+      padding: 40px 20px;
+    }
+
+    .resume-container {
+      max-w: 800px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      padding: 40px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+
+    header {
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 20px;
+      margin-bottom: 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    .header-left h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 36px;
+      font-weight: 800;
+      color: var(--dark);
+      line-height: 1.1;
+      margin-bottom: 5px;
+    }
+
+    .header-left .title {
+      font-size: 18px;
+      color: var(--primary);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    .header-right {
+      text-align: right;
+      font-size: 13px;
+      color: var(--gray);
+    }
+
+    .header-right a {
+      color: var(--dark);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .header-right a:hover {
+      text-decoration: underline;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 30px;
+    }
+
+    .section-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--dark);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 15px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-title::after {
+      content: '';
+      flex-grow: 1;
+      height: 1px;
+      background-color: var(--border);
+    }
+
+    .summary-text {
+      font-size: 14px;
+      color: var(--gray);
+      margin-bottom: 25px;
+      text-align: justify;
+    }
+
+    .experience-item, .project-item, .education-item {
+      margin-bottom: 20px;
+    }
+
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 5px;
+    }
+
+    .item-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--dark);
+    }
+
+    .item-subtitle {
+      font-size: 13px;
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    .item-date {
+      font-size: 12px;
+      color: var(--gray);
+      font-family: monospace;
+    }
+
+    .item-desc {
+      font-size: 13px;
+      color: var(--gray);
+      margin-top: 5px;
+    }
+
+    ul.item-bullets {
+      margin-left: 15px;
+      margin-top: 5px;
+      font-size: 13px;
+      color: var(--gray);
+    }
+
+    ul.item-bullets li {
+      margin-bottom: 4px;
+    }
+
+    .tech-tag {
+      display: inline-block;
+      font-size: 11px;
+      font-family: monospace;
+      background-color: var(--light);
+      color: var(--dark);
+      padding: 2px 8px;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+      margin-right: 4px;
+      margin-top: 5px;
+    }
+
+    .skills-group {
+      margin-bottom: 15px;
+    }
+
+    .skills-group-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 5px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+
+    .skill-badge {
+      font-size: 11px;
+      background-color: var(--light);
+      border: 1px solid var(--border);
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-weight: 500;
+    }
+
+    /* Print utility styles */
+    .print-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: var(--primary);
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 50px;
+      font-family: 'Outfit', sans-serif;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+      transition: transform 0.2s;
+      z-index: 100;
+    }
+
+    .print-btn:hover {
+      transform: scale(1.05);
+    }
+
+    @media print {
+      body {
+        background-color: #ffffff;
+        padding: 0;
+      }
+      .resume-container {
+        box-shadow: none;
+        border: none;
+        padding: 0;
+      }
+      .print-btn {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <button class="print-btn" onclick="window.print()">Print / Save as PDF</button>
+
+  <div class="resume-container">
+    <header>
+      <div class="header-left">
+        <h1>Om Pawar</h1>
+        <div class="title">Full Stack Developer</div>
+      </div>
+      <div class="header-right">
+        <div>Email: <a href="mailto:ompawar7511@gmail.com">ompawar7511@gmail.com</a></div>
+        <div>Phone: +91 9922837511</div>
+        <div>Location: Pune, Maharashtra, India</div>
+        <div>LinkedIn: <a href="https://www.linkedin.com/in/om-pawar-425b40286/" target="_blank">om-pawar-425b40286</a></div>
+        <div>GitHub: <a href="https://github.com/Ompawar7511" target="_blank">Ompawar7511</a></div>
+      </div>
+    </header>
+
+    <div class="grid-container">
+      <!-- Left Column: Summary, Experience, Projects -->
+      <div class="column-left">
+        <div class="section-title">Professional Summary</div>
+        <p class="summary-text">
+          Full Stack Developer passionate about building secure, scalable, and user-friendly web applications. Skilled in Java, Spring Boot, React.js, MERN Stack, REST APIs, JWT Authentication, MySQL, and MongoDB. Strong problem-solving abilities with a passion for learning emerging technologies and delivering impactful software solutions.
+        </p>
+
+        <div class="section-title">Experience</div>
+        <div class="experience-item">
+          <div class="item-header">
+            <div>
+              <div class="item-title">Web Development Intern</div>
+              <div class="item-subtitle">Unified Mentor</div>
+            </div>
+            <div class="item-date">June 2023 - July 2023</div>
+          </div>
+          <ul class="item-bullets">
+            <li>Developed responsive, cross-browser compatible web page designs.</li>
+            <li>Improved UI/UX experiences using semantic HTML, CSS, and modern JavaScript modules.</li>
+            <li>Collaborated and maintained version-controlled sprints using Git and GitHub workflows.</li>
+            <li>Completed real-world front-end engineering assignments.</li>
+          </ul>
+        </div>
+
+        <div class="section-title">Key Projects</div>
+        <div class="project-item">
+          <div class="item-header">
+            <div>
+              <div class="item-title">Fly Mail</div>
+              <div class="item-subtitle">Full Stack Email Application</div>
+            </div>
+            <div class="item-date">MERN Stack</div>
+          </div>
+          <p class="item-desc">Secure email platform supporting full user sessions, CRUD email actions, protected paths, and 2FA authentication.</p>
+          <div>
+            <span class="tech-tag">React.js</span>
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">Express.js</span>
+            <span class="tech-tag">MongoDB</span>
+            <span class="tech-tag">JWT</span>
+          </div>
+        </div>
+
+        <div class="project-item">
+          <div class="item-header">
+            <div>
+              <div class="item-title">BookBazzar</div>
+              <div class="item-subtitle">Full Stack Book Store Application</div>
+            </div>
+            <div class="item-date">Spring Boot / React</div>
+          </div>
+          <p class="item-desc">Secure bookstore portal supporting shopping carts, order handling, admin stock inventory, and role authentication.</p>
+          <div>
+            <span class="tech-tag">Spring Boot</span>
+            <span class="tech-tag">React.js</span>
+            <span class="tech-tag">MySQL</span>
+            <span class="tech-tag">JWT</span>
+          </div>
+        </div>
+
+        <div class="project-item">
+          <div class="item-header">
+            <div>
+              <div class="item-title">Krishi Bridge</div>
+              <div class="item-subtitle">Logistic Matching Platform</div>
+            </div>
+            <div class="item-date">MERN Stack</div>
+          </div>
+          <p class="item-desc">Logistics marketplace dashboard connecting farmers with transport providers for vehicle scheduling.</p>
+          <div>
+            <span class="tech-tag">React.js</span>
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">Express.js</span>
+            <span class="tech-tag">MongoDB</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Skills, Education, Certs -->
+      <div class="column-right">
+        <div class="section-title">Technical Skills</div>
+        
+        <div class="skills-group">
+          <div class="skills-group-title">Languages & Frameworks</div>
+          <div class="skills-list">
+            <span class="skill-badge">Java</span>
+            <span class="skill-badge">JavaScript</span>
+            <span class="skill-badge">Spring Boot</span>
+            <span class="skill-badge">React.js</span>
+            <span class="skill-badge">Node.js</span>
+            <span class="skill-badge">Express.js</span>
+          </div>
+        </div>
+
+        <div class="skills-group">
+          <div class="skills-group-title">Databases & Tools</div>
+          <div class="skills-list">
+            <span class="skill-badge">MySQL</span>
+            <span class="skill-badge">MongoDB</span>
+            <span class="skill-badge">Git</span>
+            <span class="skill-badge">GitHub</span>
+            <span class="skill-badge">Postman</span>
+          </div>
+        </div>
+
+        <div class="skills-group">
+          <div class="skills-group-title">Security & Core</div>
+          <div class="skills-list">
+            <span class="skill-badge">JWT Authentication</span>
+            <span class="skill-badge">Role Based Access Control</span>
+            <span class="skill-badge">REST APIs</span>
+            <span class="skill-badge">OOP</span>
+            <span class="skill-badge">DSA</span>
+          </div>
+        </div>
+
+        <div class="section-title">Education</div>
+        <div class="education-item">
+          <div class="item-title">Bachelor of Computer Engineering</div>
+          <div class="item-subtitle" style="color: var(--gray); font-size: 12px;">Savitribai Phule Pune University</div>
+          <div class="item-date">2021 - 2025</div>
+          <div class="item-desc" style="font-weight: 600;">Grade: 67.00%</div>
+        </div>
+        <div class="education-item">
+          <div class="item-title">HSC (Class XII)</div>
+          <div class="item-subtitle" style="color: var(--gray); font-size: 12px;">Maharashtra State Board</div>
+          <div class="item-date">2020 - 2021</div>
+          <div class="item-desc" style="font-weight: 600;">Grade: 77.33%</div>
+        </div>
+        <div class="education-item">
+          <div class="item-title">SSC (Class X)</div>
+          <div class="item-subtitle" style="color: var(--gray); font-size: 12px;">Maharashtra State Board</div>
+          <div class="item-date">2018 - 2019</div>
+          <div class="item-desc" style="font-weight: 600;">Grade: 78.20%</div>
+        </div>
+
+        <div class="section-title">Certifications</div>
+        <div class="education-item">
+          <div class="item-title" style="font-size: 13px;">Deloitte Data Analytics Job Simulation</div>
+          <div class="item-subtitle" style="color: var(--gray); font-size: 11px;">Forage Certification</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

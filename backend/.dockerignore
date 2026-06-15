@@ -1,0 +1,22 @@
+# Build artifacts
+target/
+
+# IDE/Editor configurations
+.settings/
+.classpath
+.project
+.factorypath
+.vscode/
+.idea/
+*.iml
+
+# Version control
+.git/
+.gitignore
+
+# Database configuration scripts
+db-setup.sql
+
+# Docker specific files
+Dockerfile
+.dockerignore

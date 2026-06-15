@@ -1,0 +1,103 @@
+OM PAWAR
+Full Stack Developer
+Phone: +91-9922837511
+Email: ompawar7511@gmail.com
+Location: Pune, Maharashtra, India
+LinkedIn: https://www.linkedin.com/in/om-pawar-425b40286/
+GitHub: https://github.com/Ompawar7511
+
+=========================================
+PROFESSIONAL SUMMARY
+=========================================
+Full Stack Developer passionate about building secure, scalable, and user-friendly web applications. Skilled in Java, Spring Boot, React.js, MERN Stack, REST APIs, JWT Authentication, MySQL, and MongoDB. Strong problem-solving abilities with a passion for learning emerging technologies and delivering impactful software solutions.
+
+=========================================
+TECHNICAL SKILLS
+=========================================
+- Frontend: React.js, JavaScript (ES6), HTML5, CSS3, Bootstrap, Tailwind CSS
+- Backend: Java, Spring Boot, Node.js, Express.js
+- Database: MongoDB, MySQL
+- Authentication & Security: JWT (JSON Web Tokens), Role-Based Access Control (RBAC)
+- Tools: Git, GitHub, Postman
+- Core Concepts: Data Structures & Algorithms (DSA), OOP (Object-Oriented Programming) Principles, REST APIs
+
+=========================================
+PROFESSIONAL EXPERIENCE
+=========================================
+Web Development Intern
+Unified Mentor | Remote
+June 2023 - July 2023
+- Developed and styled responsive, layout-friendly web pages, ensuring browser compatibility.
+- Improved UI/UX experiences using standard semantic HTML, CSS, and modern JavaScript features.
+- Collaborated and version-controlled codebase efficiently using Git and GitHub workflows.
+- Worked on multiple real-world front-end web development sprints and projects.
+
+=========================================
+PROJECTS
+=========================================
+Project 1: Fly Mail – Full Stack Email Application
+Technologies: React.js, Node.js, Express.js, MongoDB, JWT
+Description: A secure and responsive email platform built using the MERN Stack.
+Key Features:
+- Implemented secure JWT and Two-Factor Authentication (2FA).
+- Set up protected route wrappers and user session controllers.
+- Integrated fully functional CRUD operations for composing and managing messages via REST APIs.
+- Designed a custom, responsive user interface layout.
+
+Project 2: BookBazzar – Full Stack Book Store Application
+Technologies: Spring Boot, React.js, MySQL, JWT
+Description: Secure e-commerce platform for books with authentication and role-based access.
+Key Features:
+- Built robust JWT authentication and Role-Based Access Control (RBAC) for admins and customers.
+- Created an interactive shopping cart and purchase orders controller.
+- Integrated inventory management and catalog dashboard for admin users.
+- Designed custom REST APIs using Spring Boot and JPA Hibernate.
+
+Project 3: Krishi Bridge
+Technologies: React.js, Node.js, Express.js, MongoDB
+Description: Logistics platform connecting farmers with transporter vehicles.
+Key Features:
+- Developed scheduling for vehicle booking and transport matching.
+- Engineered user dashboards for both Farmers and Transporters.
+- Integrated secure system authentication and real-time database updates.
+
+Project 4: B2B E-Commerce Platform
+Technologies: J2EE, MySQL, JWT
+Description: Web-based platform enabling secure business transactions and negotiations between vendors and shopkeepers.
+Key Features:
+- Programmed vendor product catalog and checkout flows.
+- Built automatic invoice generation and a real-time negotiation and chat panel.
+- Programmed custom role authorization.
+
+=========================================
+EDUCATION
+=========================================
+Bachelor of Computer Engineering (2021 - 2025)
+Savitribai Phule Pune University (SPPU)
+Grade: 67.00%
+
+HSC (High School)
+State Board of Maharashtra
+Grade: 77.33%
+
+SSC (Schooling)
+State Board of Maharashtra
+Grade: 78.20%
+
+=========================================
+CERTIFICATIONS
+=========================================
+Deloitte Data Analytics Job Simulation (Forage)
+- Analyzed simulation datasets to extract actionable business performance metrics.
+- Prepared dashboards and presentations communicating technology findings and optimization recommendations.
+- Identified trends in user and transaction engagement metrics to deliver client value.
+
+=========================================
+SOFT SKILLS
+=========================================
+- Communication
+- Problem Solving
+- Teamwork
+- Quick Learner
+- Decision Making
+- Goal Oriented
